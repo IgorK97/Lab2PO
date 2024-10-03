@@ -7,15 +7,19 @@
       "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\windowsformsapp2\\mypizzadeliverydb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\mypizzadeliverydb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\windowsformsapp2\\addclientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\addclientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\windowsformsapp2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\windowsformsapp2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\windowsformsapp2\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\windowsformsapp2\\mypizzadeliverydb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\mypizzadeliverydb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\windowsformsapp2\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddClientForm.cs",
+              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\AddClientForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\AddClientForm.cs",
+              "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\AddClientForm.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\AddClientForm.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T17:50:30.802Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -56,14 +73,14 @@
               "RelativeDocumentMoniker": "WindowsFormsApp2\\Form1.cs",
               "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Form1.cs",
               "RelativeToolTip": "WindowsFormsApp2\\Form1.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAIA6wCYAAABVAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAuwCgBAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T14:38:05.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\App.config",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\App.config",
@@ -76,15 +93,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MyPizzaDeliveryDb.edmx [Diagram1]",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\MyPizzaDeliveryDb.edmx",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\MyPizzaDeliveryDb.edmx",
               "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\MyPizzaDeliveryDb.edmx [Diagram1]",
               "RelativeToolTip": "WindowsFormsApp2\\MyPizzaDeliveryDb.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-10-03T14:30:11.35Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2024-10-03T14:30:11.35Z"
             }
           ]
         }
