@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PizzaDeliveryModelContainer" CdmEntityContainer="PizzaDeliveryContext">
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="PizzaDeliveryModel.clients">
+        <MappingFragment StoreEntitySet="clients">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="C_password" ColumnName="_password" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="couriers">
+      <EntityTypeMapping TypeName="PizzaDeliveryModel.couriers">
+        <MappingFragment StoreEntitySet="couriers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="C_password" ColumnName="_password" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DelStatus">
+      <EntityTypeMapping TypeName="PizzaDeliveryModel.DelStatus">
+        <MappingFragment StoreEntitySet="DelStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ingredients">
+      <EntityTypeMapping TypeName="PizzaDeliveryModel.ingredients">
+        <MappingFragment StoreEntitySet="ingredients">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="C_name" ColumnName="_name" />
+          <ScalarProperty Name="price_per_gram" ColumnName="price_per_gram" />
+          <ScalarProperty Name="small" ColumnName="small" />
+          <ScalarProperty Name="medium" ColumnName="medium" />
+          <ScalarProperty Name="big" ColumnName="big" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="ingrimage" ColumnName="ingrimage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="managers">
+      <EntityTypeMapping TypeName="PizzaDeliveryModel.managers">
+        <MappingFragment StoreEntitySet="managers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="C_password" ColumnName="_password" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order_lines">
+      <EntityTypeMapping TypeName="PizzaDeliveryModel.order_lines">
+        <MappingFragment StoreEntitySet="order_lines">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ordersId" ColumnName="ordersId" />
+          <ScalarProperty Name="pizzaId" ColumnName="pizzaId" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="custom" ColumnName="custom" />
+          <ScalarProperty Name="position_price" ColumnName="position_price" />
+          <ScalarProperty Name="pizza_sizesId" ColumnName="pizza_sizesId" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="PizzaDeliveryModel.orders">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="clientId" ColumnName="clientId" />
+          <ScalarProperty Name="courierId" ColumnName="courierId" />
+          <ScalarProperty Name="final_price" ColumnName="final_price" />
+          <ScalarProperty Name="address_del" ColumnName="address_del" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="ordertime" ColumnName="ordertime" />
+          <ScalarProperty Name="deliverytime" ColumnName="deliverytime" />
+          <ScalarProperty Name="delstatusId" ColumnName="delstatusId" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pizza">
+      <EntityTypeMapping TypeName="PizzaDeliveryModel.pizza">
+        <MappingFragment StoreEntitySet="pizza">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="C_name" ColumnName="_name" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="pizzaimage" ColumnName="pizzaimage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pizza_sizes">
+      <EntityTypeMapping TypeName="PizzaDeliveryModel.pizza_sizes">
+        <MappingFragment StoreEntitySet="pizza_sizes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="PizzaDeliveryModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="C_password" ColumnName="_password" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="custom_ingredients" TypeName="PizzaDeliveryModel.custom_ingredients" StoreEntitySet="custom_ingredients">
+      <EndProperty Name="ingredients">
+        <ScalarProperty Name="id" ColumnName="ingredientsId" />
+      </EndProperty>
+      <EndProperty Name="order_lines">
+        <ScalarProperty Name="id" ColumnName="order_linesId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="pizza_composition" TypeName="PizzaDeliveryModel.pizza_composition" StoreEntitySet="pizza_composition">
+      <EndProperty Name="ingredients">
+        <ScalarProperty Name="id" ColumnName="ingredientsId" />
+      </EndProperty>
+      <EndProperty Name="pizza">
+        <ScalarProperty Name="id" ColumnName="pizzaId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

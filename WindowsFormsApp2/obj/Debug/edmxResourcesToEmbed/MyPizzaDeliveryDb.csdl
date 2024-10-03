@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PizzaDeliveryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="clients">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="surname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C_password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="orders" Relationship="Self.orders_clientId_fkey" FromRole="clients" ToRole="orders" />
+  </EntityType>
+  <EntityType Name="couriers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="surname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C_password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="orders" Relationship="Self.orders_courierId_fkey" FromRole="couriers" ToRole="orders" />
+  </EntityType>
+  <EntityType Name="DelStatus">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="orders" Relationship="Self.orders_delstatus_id_fkey" FromRole="DelStatus" ToRole="orders" />
+  </EntityType>
+  <EntityType Name="ingredients">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="C_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price_per_gram" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="small" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="medium" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="big" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="active" Type="Boolean" Nullable="false" />
+    <Property Name="ingrimage" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <NavigationProperty Name="order_lines" Relationship="Self.custom_ingredients" FromRole="ingredients" ToRole="order_lines" />
+    <NavigationProperty Name="pizza" Relationship="Self.pizza_composition" FromRole="ingredients" ToRole="pizza" />
+  </EntityType>
+  <EntityType Name="managers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="surname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C_password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="order_lines">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ordersId" Type="Int32" Nullable="false" />
+    <Property Name="pizzaId" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="custom" Type="Boolean" Nullable="false" />
+    <Property Name="position_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="pizza_sizesId" Type="Int32" Nullable="false" />
+    <Property Name="weight" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <NavigationProperty Name="orders" Relationship="Self.pizza_orders_order_id_fkey" FromRole="order_lines" ToRole="orders" />
+    <NavigationProperty Name="pizza" Relationship="Self.pizza_orders_pizza_id_fkey" FromRole="order_lines" ToRole="pizza" />
+    <NavigationProperty Name="pizza_sizes" Relationship="Self.pizza_sizes_id_fkey" FromRole="order_lines" ToRole="pizza_sizes" />
+    <NavigationProperty Name="ingredients" Relationship="Self.custom_ingredients" FromRole="order_lines" ToRole="ingredients" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="clientId" Type="Int32" Nullable="false" />
+    <Property Name="courierId" Type="Int32" />
+    <Property Name="final_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="address_del" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="weight" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="ordertime" Type="DateTimeOffset" Precision="7" />
+    <Property Name="deliverytime" Type="DateTimeOffset" Precision="7" />
+    <Property Name="delstatusId" Type="Int32" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="clients" Relationship="Self.orders_clientId_fkey" FromRole="orders" ToRole="clients" />
+    <NavigationProperty Name="couriers" Relationship="Self.orders_courierId_fkey" FromRole="orders" ToRole="couriers" />
+    <NavigationProperty Name="DelStatus" Relationship="Self.orders_delstatus_id_fkey" FromRole="orders" ToRole="DelStatus" />
+    <NavigationProperty Name="order_lines" Relationship="Self.pizza_orders_order_id_fkey" FromRole="orders" ToRole="order_lines" />
+  </EntityType>
+  <EntityType Name="pizza">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="C_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="active" Type="Boolean" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pizzaimage" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <NavigationProperty Name="order_lines" Relationship="Self.pizza_orders_pizza_id_fkey" FromRole="pizza" ToRole="order_lines" />
+    <NavigationProperty Name="ingredients" Relationship="Self.pizza_composition" FromRole="pizza" ToRole="ingredients" />
+  </EntityType>
+  <EntityType Name="pizza_sizes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="weight" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <NavigationProperty Name="order_lines" Relationship="Self.pizza_sizes_id_fkey" FromRole="pizza_sizes" ToRole="order_lines" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="surname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="C_password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="orders_clientId_fkey">
+    <End Role="clients" Type="Self.clients" Multiplicity="1" />
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clients">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="clientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="orders_courierId_fkey">
+    <End Role="couriers" Type="Self.couriers" Multiplicity="0..1" />
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="couriers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="courierId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="orders_delstatus_id_fkey">
+    <End Role="DelStatus" Type="Self.DelStatus" Multiplicity="1" />
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DelStatus">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="delstatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="pizza_orders_order_id_fkey">
+    <End Role="orders" Type="Self.orders" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="order_lines" Type="Self.order_lines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="order_lines">
+        <PropertyRef Name="ordersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="pizza_orders_pizza_id_fkey">
+    <End Role="pizza" Type="Self.pizza" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="order_lines" Type="Self.order_lines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pizza">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="order_lines">
+        <PropertyRef Name="pizzaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="pizza_sizes_id_fkey">
+    <End Role="pizza_sizes" Type="Self.pizza_sizes" Multiplicity="1" />
+    <End Role="order_lines" Type="Self.order_lines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pizza_sizes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="order_lines">
+        <PropertyRef Name="pizza_sizesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="custom_ingredients">
+    <End Role="ingredients" Type="Self.ingredients" Multiplicity="*" />
+    <End Role="order_lines" Type="Self.order_lines" Multiplicity="*" />
+  </Association>
+  <Association Name="pizza_composition">
+    <End Role="ingredients" Type="Self.ingredients" Multiplicity="*" />
+    <End Role="pizza" Type="Self.pizza" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="PizzaDeliveryContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="clients" EntityType="Self.clients" />
+    <EntitySet Name="couriers" EntityType="Self.couriers" />
+    <EntitySet Name="DelStatus" EntityType="Self.DelStatus" />
+    <EntitySet Name="ingredients" EntityType="Self.ingredients" />
+    <EntitySet Name="managers" EntityType="Self.managers" />
+    <EntitySet Name="order_lines" EntityType="Self.order_lines" />
+    <EntitySet Name="orders" EntityType="Self.orders" />
+    <EntitySet Name="pizza" EntityType="Self.pizza" />
+    <EntitySet Name="pizza_sizes" EntityType="Self.pizza_sizes" />
+    <EntitySet Name="users" EntityType="Self.users" />
+    <AssociationSet Name="orders_clientId_fkey" Association="Self.orders_clientId_fkey">
+      <End Role="clients" EntitySet="clients" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="orders_courierId_fkey" Association="Self.orders_courierId_fkey">
+      <End Role="couriers" EntitySet="couriers" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="orders_delstatus_id_fkey" Association="Self.orders_delstatus_id_fkey">
+      <End Role="DelStatus" EntitySet="DelStatus" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="pizza_orders_order_id_fkey" Association="Self.pizza_orders_order_id_fkey">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="order_lines" EntitySet="order_lines" />
+    </AssociationSet>
+    <AssociationSet Name="pizza_orders_pizza_id_fkey" Association="Self.pizza_orders_pizza_id_fkey">
+      <End Role="pizza" EntitySet="pizza" />
+      <End Role="order_lines" EntitySet="order_lines" />
+    </AssociationSet>
+    <AssociationSet Name="pizza_sizes_id_fkey" Association="Self.pizza_sizes_id_fkey">
+      <End Role="pizza_sizes" EntitySet="pizza_sizes" />
+      <End Role="order_lines" EntitySet="order_lines" />
+    </AssociationSet>
+    <AssociationSet Name="custom_ingredients" Association="Self.custom_ingredients">
+      <End Role="ingredients" EntitySet="ingredients" />
+      <End Role="order_lines" EntitySet="order_lines" />
+    </AssociationSet>
+    <AssociationSet Name="pizza_composition" Association="Self.pizza_composition">
+      <End Role="ingredients" EntitySet="ingredients" />
+      <End Role="pizza" EntitySet="pizza" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

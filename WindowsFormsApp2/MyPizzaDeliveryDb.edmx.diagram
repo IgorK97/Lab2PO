@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="505bcff3f37842de9ded0ad2c7370015" Name="Diagram1">
+        <EntityTypeShape EntityType="PizzaDeliveryModel.clients" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaDeliveryModel.couriers" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaDeliveryModel.DelStatus" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaDeliveryModel.ingredients" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaDeliveryModel.managers" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaDeliveryModel.order_lines" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaDeliveryModel.orders" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaDeliveryModel.pizza" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaDeliveryModel.pizza_sizes" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PizzaDeliveryModel.users" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="PizzaDeliveryModel.orders_clientId_fkey" ManuallyRouted="false" />
+        <AssociationConnector Association="PizzaDeliveryModel.orders_courierId_fkey" ManuallyRouted="false" />
+        <AssociationConnector Association="PizzaDeliveryModel.orders_delstatus_id_fkey" ManuallyRouted="false" />
+        <AssociationConnector Association="PizzaDeliveryModel.pizza_orders_order_id_fkey" ManuallyRouted="false" />
+        <AssociationConnector Association="PizzaDeliveryModel.pizza_orders_pizza_id_fkey" ManuallyRouted="false" />
+        <AssociationConnector Association="PizzaDeliveryModel.pizza_sizes_id_fkey" ManuallyRouted="false" />
+        <AssociationConnector Association="PizzaDeliveryModel.custom_ingredients" ManuallyRouted="false" />
+        <AssociationConnector Association="PizzaDeliveryModel.pizza_composition" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
