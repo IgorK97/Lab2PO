@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.dataGridViewClients = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -54,6 +56,7 @@
             this.CourierId_ = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.orderdate_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,8 +78,6 @@
             this.deliverytimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceOrders = new System.Windows.Forms.BindingSource(this.components);
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).BeginInit();
@@ -108,6 +109,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button7);
             this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.dataGridViewClients);
@@ -120,8 +122,30 @@
             this.tabPage1.Text = "Clients";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(210, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(97, 33);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "UPDATE";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(113, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(80, 32);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "ADD";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // dataGridViewClients
             // 
+            this.dataGridViewClients.AllowUserToAddRows = false;
+            this.dataGridViewClients.AllowUserToDeleteRows = false;
             this.dataGridViewClients.AutoGenerateColumns = false;
             this.dataGridViewClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -137,6 +161,7 @@
             this.dataGridViewClients.DataSource = this.bindingSourceClients;
             this.dataGridViewClients.Location = new System.Drawing.Point(7, 43);
             this.dataGridViewClients.Name = "dataGridViewClients";
+            this.dataGridViewClients.ReadOnly = true;
             this.dataGridViewClients.Size = new System.Drawing.Size(755, 351);
             this.dataGridViewClients.TabIndex = 1;
             // 
@@ -164,6 +189,8 @@
             // 
             // dataGridViewOrders
             // 
+            this.dataGridViewOrders.AllowUserToAddRows = false;
+            this.dataGridViewOrders.AllowUserToDeleteRows = false;
             this.dataGridViewOrders.AutoGenerateColumns = false;
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrders.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -180,6 +207,7 @@
             this.dataGridViewOrders.DataSource = this.bindingSourceOrders;
             this.dataGridViewOrders.Location = new System.Drawing.Point(7, 51);
             this.dataGridViewOrders.Name = "dataGridViewOrders";
+            this.dataGridViewOrders.ReadOnly = true;
             this.dataGridViewOrders.Size = new System.Drawing.Size(755, 343);
             this.dataGridViewOrders.TabIndex = 1;
             // 
@@ -397,59 +425,78 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.buttonReport2_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(325, 4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(89, 32);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "DELETE";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // firstnameDataGridViewTextBoxColumn
             // 
             this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
             this.firstnameDataGridViewTextBoxColumn.HeaderText = "Имя";
             this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lastnameDataGridViewTextBoxColumn
             // 
             this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
             this.lastnameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
             this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // surnameDataGridViewTextBoxColumn
             // 
             this.surnameDataGridViewTextBoxColumn.DataPropertyName = "surname";
             this.surnameDataGridViewTextBoxColumn.HeaderText = "Отчество";
             this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // loginDataGridViewTextBoxColumn
             // 
             this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
             this.loginDataGridViewTextBoxColumn.HeaderText = "Логин";
             this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cpasswordDataGridViewTextBoxColumn
             // 
             this.cpasswordDataGridViewTextBoxColumn.DataPropertyName = "C_password";
             this.cpasswordDataGridViewTextBoxColumn.HeaderText = "Пароль";
             this.cpasswordDataGridViewTextBoxColumn.Name = "cpasswordDataGridViewTextBoxColumn";
+            this.cpasswordDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
             this.phoneDataGridViewTextBoxColumn.HeaderText = "Телефон";
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Почта";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "Адрес";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bindingSourceClients
             // 
@@ -460,12 +507,14 @@
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn1.HeaderText = "id";
             this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // clientId
             // 
             this.clientId.DataPropertyName = "clientId";
             this.clientId.HeaderText = "Клиент";
             this.clientId.Name = "clientId";
+            this.clientId.ReadOnly = true;
             this.clientId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.clientId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
@@ -474,6 +523,7 @@
             this.courierId.DataPropertyName = "courierId";
             this.courierId.HeaderText = "Курьер";
             this.courierId.Name = "courierId";
+            this.courierId.ReadOnly = true;
             this.courierId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.courierId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
@@ -482,24 +532,28 @@
             this.finalpriceDataGridViewTextBoxColumn.DataPropertyName = "final_price";
             this.finalpriceDataGridViewTextBoxColumn.HeaderText = "Цена";
             this.finalpriceDataGridViewTextBoxColumn.Name = "finalpriceDataGridViewTextBoxColumn";
+            this.finalpriceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // addressdelDataGridViewTextBoxColumn
             // 
             this.addressdelDataGridViewTextBoxColumn.DataPropertyName = "address_del";
             this.addressdelDataGridViewTextBoxColumn.HeaderText = "Адрес";
             this.addressdelDataGridViewTextBoxColumn.Name = "addressdelDataGridViewTextBoxColumn";
+            this.addressdelDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // weightDataGridViewTextBoxColumn
             // 
             this.weightDataGridViewTextBoxColumn.DataPropertyName = "weight";
             this.weightDataGridViewTextBoxColumn.HeaderText = "Вес";
             this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
+            this.weightDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // delstatusId
             // 
             this.delstatusId.DataPropertyName = "delstatusId";
             this.delstatusId.HeaderText = "Статус";
             this.delstatusId.Name = "delstatusId";
+            this.delstatusId.ReadOnly = true;
             this.delstatusId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.delstatusId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
@@ -508,40 +562,25 @@
             this.ordertimeDataGridViewTextBoxColumn.DataPropertyName = "ordertime";
             this.ordertimeDataGridViewTextBoxColumn.HeaderText = "Время заказа";
             this.ordertimeDataGridViewTextBoxColumn.Name = "ordertimeDataGridViewTextBoxColumn";
+            this.ordertimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // deliverytimeDataGridViewTextBoxColumn
             // 
             this.deliverytimeDataGridViewTextBoxColumn.DataPropertyName = "deliverytime";
             this.deliverytimeDataGridViewTextBoxColumn.HeaderText = "Время доставки";
             this.deliverytimeDataGridViewTextBoxColumn.Name = "deliverytimeDataGridViewTextBoxColumn";
+            this.deliverytimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // commentDataGridViewTextBoxColumn
             // 
             this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
             this.commentDataGridViewTextBoxColumn.HeaderText = "Комментарий";
             this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.commentDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // bindingSourceOrders
             // 
             this.bindingSourceOrders.DataSource = typeof(WindowsFormsApp2.orders);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(113, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(80, 32);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "ADD";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(210, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(97, 33);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "UPDATE";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -623,6 +662,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button7;
     }
 }
 

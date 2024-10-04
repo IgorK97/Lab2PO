@@ -150,6 +150,9 @@
     <Compile Include="users.cs">
       <DependentUpon>MyPizzaDeliveryDb.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddClientForm.resx">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

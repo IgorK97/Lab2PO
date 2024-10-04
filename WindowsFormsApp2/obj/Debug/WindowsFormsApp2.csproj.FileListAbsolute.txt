@@ -36,3 +36,4 @@ C:\Users\Igor\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsF.
 C:\Users\Igor\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Igor\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\Igor\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\Igor\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AddClientForm.resources

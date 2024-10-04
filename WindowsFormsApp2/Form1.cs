@@ -159,8 +159,13 @@ namespace WindowsFormsApp2
             bool res = Validate();
             if (res)
             {
-                dbContext.SaveChanges();
+                dbContext.clients.Load();
+                //dataGridViewClients.Refresh();
+                allClients = dbContext.clients.Local.ToList();
+                dataGridViewClients.DataSource = null;
+                dataGridViewClients.DataSource = allClients;
                 dataGridViewClients.Refresh();
+
             }
 
         }
@@ -246,69 +251,73 @@ namespace WindowsFormsApp2
 
         }
 
-        //private void btnAdd_Click(object sender, EventArgs e)
-        //{
-        //    AddPhoneForm f = new AddPhoneForm();
-        //    f.comboBoxManuf.DataSource = allManufactures;
-        //    f.comboBoxManuf.DisplayMember = "Name";
-        //    f.comboBoxManuf.ValueMember = "Id";
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddClientForm f = new AddClientForm(dbContext, null);
+            
 
-        //    DialogResult result = f.ShowDialog(this);
+            f.ShowDialog(this);
 
-        //    if (result == DialogResult.Cancel)
-        //        return;
+        }
 
-        //    Phone phone = new Phone();
-        //    phone.manufacturerId = (int)f.comboBoxManuf.SelectedValue;
-        //    phone.name = f.textBox1.Text;
-        //    phone.cost = f.numericUpDown1.Value;
-        //    phone.manufacturerId = (int)f.comboBoxManuf.SelectedValue;
-        //    phone.description = f.textBox2.Text;
-        //    dbcontext.Phones.Add(phone);
-        //    dbcontext.SaveChanges();
+        private int getSelectedRow(DataGridView dgv)
+        {
+            int index = -1;
+            if (dgv.SelectedRows.Count > 0 || dgv.SelectedCells.Count == 1)
+            {
+                if (dgv.SelectedRows.Count > 0)
+                    index = dgv.SelectedRows[0].Index;
+                else index = dgv.SelectedCells[0].RowIndex;
+            }
+            return index;
+        }
 
-        //    MessageBox.Show("Новый объект добавлен");
-        //}
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int index = getSelectedRow(dataGridViewClients);
+            int id = 0;
+            bool converted = Int32.TryParse(dataGridViewClients[0, index].Value.ToString(), out id);
+            if (converted == false)
+                return;
+            dbContext.clients.Remove(dbContext.clients.Find(id));
+            dbContext.SaveChanges();
+            //dataGridViewClients.DataSource = null;
+            //dataGridViewClients.DataSource=dbContext.clients;
+        }
 
-        //private void btnUpdate_Click(object sender, EventArgs e)
-        //{
-        //    int index = getSelectedRow(dataGridViewPhones);
-        //    if (index != -1)
-        //    {
-        //        int id = 0;
-        //        bool converted = Int32.TryParse(dataGridViewPhones[0, index].Value.ToString(), out id);
-        //        if (converted == false)
-        //            return;
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int index = getSelectedRow(dataGridViewClients);
+            if (index != -1)
+            {
+                int id = 0;
+                bool converted = Int32.TryParse(dataGridViewClients[0, index].Value.ToString(), out id);
+                if (converted == false)
+                    return;
 
-        //        Phone ph = dbcontext.Phones.Where(i => i.id == id).FirstOrDefault();
-        //        if (ph != null)
-        //        {
-        //            AddPhoneForm f = new AddPhoneForm();
-        //            f.comboBoxManuf.DataSource = allManufactures;
-        //            f.comboBoxManuf.DisplayMember = "Name";
-        //            f.comboBoxManuf.ValueMember = "Id";
-        //            f.numericUpDown1.Value = ph.cost;
-        //            f.comboBoxManuf.SelectedValue = ph.manufacturerId;
-        //            f.textBox1.Text = ph.name;
-        //            f.textBox2.Text = ph.description;
+                clients ncl = dbContext.clients.Where(i => i.id == id).FirstOrDefault();
+                if (ncl != null)
+                {
+                    AddClientForm f = new AddClientForm(dbContext, ncl);
+                    
+                    f.textBox1.Text = ncl.first_name;
+                    f.textBox2.Text = ncl.last_name;
+                    f.textBox3.Text = ncl.surname;
+                    f.textBox4.Text = ncl.login;
+                    f.textBox5.Text = ncl.C_password;
+                    f.textBox6.Text = ncl.phone;
+                    f.textBox7.Text = ncl.email;
+                    f.textBox8.Text = ncl.address;
+                    f.textBox9.Text = ncl.C_password;
 
-        //            DialogResult result = f.ShowDialog(this);
+                    f.ShowDialog(this);
 
-        //            if (result == DialogResult.Cancel)
-        //                return;
-
-        //            ph.cost = f.numericUpDown1.Value;
-        //            ph.name = f.textBox1.Text;
-        //            ph.description = f.Text;
-        //            ph.manufacturerId = (int)f.comboBoxManuf.SelectedValue;
-
-        //            dbcontext.SaveChanges();
-        //            MessageBox.Show("Объект обновлен");
-        //        }
-        //    }
-        //    else
-        //        MessageBox.Show("Ни один объект не выбран!");
-        //}
+                    
+                }
+            }
+            else
+                MessageBox.Show("Ни один объект не выбран!");
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
