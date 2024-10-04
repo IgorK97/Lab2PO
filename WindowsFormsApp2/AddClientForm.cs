@@ -342,6 +342,10 @@ namespace WindowsFormsApp2
                     {
                         label11.Text = $"Processing failed: {sa.InnerException.InnerException.Message}";
                     }
+                    catch(System.Data.Entity.Validation.DbEntityValidationException so)
+                    {
+                        label11.Text = $"Processing failed: {so.Message}\n Проверьте наличие обязательных полей";
+                    }
                 }
                 else
                 {
@@ -368,6 +372,10 @@ namespace WindowsFormsApp2
                     catch (System.Data.Entity.Infrastructure.DbUpdateException sa)
                     {
                         label11.Text = $"Processing failed: {sa.InnerException.Message}, {sa.HResult}";
+                    }
+                    catch(System.Data.Entity.Validation.DbEntityValidationException so)
+                    {
+                        label11.Text = $"Processing failed: {so.Message}\n Проверьте наличие обязательных полей";
                     }
                 }
 
