@@ -11,7 +11,9 @@ namespace WindowsFormsApp2
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class orders
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,20 +21,27 @@ namespace WindowsFormsApp2
         {
             this.order_lines = new HashSet<order_lines>();
         }
-    
+        [Key]
         public int id { get; set; }
+        [Required]
         public int clientId { get; set; }
         public Nullable<int> courierId { get; set; }
+        [Required]
         public decimal final_price { get; set; }
+        [Required]
         public string address_del { get; set; }
+        [Required]
         public decimal weight { get; set; }
         public Nullable<System.DateTimeOffset> ordertime { get; set; }
         public Nullable<System.DateTimeOffset> deliverytime { get; set; }
+        [Required]
         public int delstatusId { get; set; }
         public string comment { get; set; }
-    
+        [ForeignKey("clientId")]
         public virtual clients clients { get; set; }
+        [ForeignKey("courierId")]
         public virtual couriers couriers { get; set; }
+        [ForeignKey("delstatusId")]
         public virtual DelStatus DelStatus { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order_lines> order_lines { get; set; }

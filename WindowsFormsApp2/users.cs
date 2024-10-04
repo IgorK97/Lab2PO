@@ -11,15 +11,22 @@ namespace WindowsFormsApp2
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class users
     {
+        [Key]
         public int id { get; set; }
+        [Required]
         public string first_name { get; set; }
+        [Required]
         public string last_name { get; set; }
         public string surname { get; set; }
+        [Required, MinLength(4)]
         public string login { get; set; }
+        [Required]
         public string C_password { get; set; }
+        [Required]
         public string phone { get; set; }
         public string email { get; set; }
     }

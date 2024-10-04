@@ -11,6 +11,7 @@ namespace WindowsFormsApp2
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class pizza
     {
@@ -20,10 +21,13 @@ namespace WindowsFormsApp2
             this.order_lines = new HashSet<order_lines>();
             this.ingredients = new HashSet<ingredients>();
         }
-    
+        [Key]
         public int id { get; set; }
+        [Required]
         public string C_name { get; set; }
+        [Required]
         public bool active { get; set; }
+        [Required]
         public string description { get; set; }
         public byte[] pizzaimage { get; set; }
     

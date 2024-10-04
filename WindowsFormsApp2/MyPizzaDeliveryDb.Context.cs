@@ -22,6 +22,65 @@ namespace WindowsFormsApp2
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<clients>().Property(p => p.login).HasMaxLength(50);
+            modelBuilder.Entity<clients>().Property(p => p.first_name).HasMaxLength(255);
+            modelBuilder.Entity<clients>().Property(p => p.last_name).HasMaxLength(255);
+            modelBuilder.Entity<clients>().Property(p => p.surname).HasMaxLength(255);
+            modelBuilder.Entity<clients>().Property(p => p.C_password).HasMaxLength(255);
+            modelBuilder.Entity<clients>().Property(p => p.phone).HasMaxLength(255);
+            modelBuilder.Entity<clients>().Property(p => p.email).HasMaxLength(255);
+            modelBuilder.Entity<clients>().Property(p => p.address).HasMaxLength(255);
+            
+
+            modelBuilder.Entity<couriers>().Property(p => p.login).HasMaxLength(50);
+            modelBuilder.Entity<couriers>().Property(p => p.first_name).HasMaxLength(255);
+            modelBuilder.Entity<couriers>().Property(p => p.last_name).HasMaxLength(255);
+            modelBuilder.Entity<couriers>().Property(p => p.surname).HasMaxLength(255);
+            modelBuilder.Entity<couriers>().Property(p => p.C_password).HasMaxLength(255);
+            modelBuilder.Entity<couriers>().Property(p => p.phone).HasMaxLength(255);
+            modelBuilder.Entity<couriers>().Property(p => p.email).HasMaxLength(255);
+
+            modelBuilder.Entity<managers>().Property(p => p.login).HasMaxLength(50);
+            modelBuilder.Entity<managers>().Property(p => p.first_name).HasMaxLength(255);
+            modelBuilder.Entity<managers>().Property(p => p.last_name).HasMaxLength(255);
+            modelBuilder.Entity<managers>().Property(p => p.surname).HasMaxLength(255);
+            modelBuilder.Entity<managers>().Property(p => p.C_password).HasMaxLength(255);
+            modelBuilder.Entity<managers>().Property(p => p.phone).HasMaxLength(255);
+            modelBuilder.Entity<managers>().Property(p => p.email).HasMaxLength(255);
+
+            modelBuilder.Entity<users>().Property(p => p.login).HasMaxLength(50);
+            modelBuilder.Entity<users>().Property(p => p.first_name).HasMaxLength(255);
+            modelBuilder.Entity<users>().Property(p => p.last_name).HasMaxLength(255);
+            modelBuilder.Entity<users>().Property(p => p.surname).HasMaxLength(255);
+            modelBuilder.Entity<users>().Property(p => p.C_password).HasMaxLength(255);
+            modelBuilder.Entity<users>().Property(p => p.phone).HasMaxLength(255);
+            modelBuilder.Entity<users>().Property(p => p.email).HasMaxLength(255);
+
+            modelBuilder.Entity<DelStatus>().Property(p => p.description).HasMaxLength(255);
+
+            modelBuilder.Entity<ingredients>().Property(p => p.C_name).HasMaxLength(100);
+            modelBuilder.Entity<ingredients>().Property(p => p.price_per_gram).HasPrecision(10, 2);
+            modelBuilder.Entity<ingredients>().Property(p => p.small).HasPrecision(10, 2);
+            modelBuilder.Entity<ingredients>().Property(p => p.medium).HasPrecision(10, 2);
+            modelBuilder.Entity<ingredients>().Property(p => p.big).HasPrecision(10, 2);
+
+            modelBuilder.Entity<pizza_sizes>().Property(p => p.name).HasMaxLength(20);
+            modelBuilder.Entity<pizza_sizes>().Property(p => p.price).HasPrecision(10,2);
+            modelBuilder.Entity<pizza_sizes>().Property(p => p.weight).HasPrecision(10,2);
+
+            modelBuilder.Entity<pizza>().Property(p => p.C_name).HasMaxLength(100);
+            modelBuilder.Entity<pizza>().Property(p => p.description).HasMaxLength(255);
+
+            modelBuilder.Entity<orders>().Property(p => p.address_del).HasMaxLength(255);
+            modelBuilder.Entity<orders>().Property(p => p.comment).HasMaxLength(255);
+
+            modelBuilder.Entity<orders>().Property(p => p.final_price).HasPrecision(10,2);
+            modelBuilder.Entity<orders>().Property(p => p.weight).HasPrecision(10, 2);
+
+            modelBuilder.Entity<order_lines>().Property(p => p.position_price).HasPrecision(10, 2);
+            modelBuilder.Entity<order_lines>().Property(p => p.weight).HasPrecision(10, 2);
+
+
             throw new UnintentionalCodeFirstException();
         }
     
