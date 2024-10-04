@@ -20,6 +20,8 @@ namespace WindowsFormsApp2
         List<clients> allClients;
         List<DelStatus> delStatuses;
         List<couriers> allCouriers;
+        List<ingredients> allIngredients;
+        List<pizza> allPizzas;
         //private NpgsqlDataAdapter clientsAdapter;
         //private NpgsqlDataAdapter ordersAdapter;
         //private NpgsqlDataAdapter couriersAdapter;
@@ -59,6 +61,8 @@ namespace WindowsFormsApp2
             LoadCouriers();
             LoadStatuses();
             LoadOrders();
+            LoadIngredients();
+            LoadPizzas();
             dataGridViewOrders.Columns[7].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
 
 
@@ -68,6 +72,16 @@ namespace WindowsFormsApp2
             FillClientCombobox();
             FillStatusCombobox();
             FillReport1Combobox();
+        }
+        private void LoadPizzas()
+        {
+            dbContext.pizza.Load();
+            allPizzas = dbContext.pizza.Local.ToList();
+        }
+        private void LoadIngredients()
+        {
+            dbContext.ingredients.Load();
+            allIngredients = dbContext.ingredients.Local.ToList();
         }
         private void LoadClients()
         {
@@ -116,6 +130,11 @@ namespace WindowsFormsApp2
 
         private void FillReport1Combobox()
         {
+            comboBoxIngredients.DataSource = allIngredients;
+            comboBoxIngredients.DisplayMember = "C_name";
+            comboBoxIngredients.ValueMember = "id";
+
+
             //using (var sqlConnection = new NpgsqlConnection(connectionString))
             //{
             //    NpgsqlDataAdapter sqlAdapter = new NpgsqlDataAdapter("SELECT * FROM public.ingredients\r\nORDER BY id ASC ", sqlConnection);
@@ -149,13 +168,7 @@ namespace WindowsFormsApp2
         /// </summary>
         private void buttonSaveClients_Click(object sender, EventArgs e)
         {
-            //clientsAdapter.Update(dataSet, "clients");
-            //dataSet.Tables["clients"].Rows.Clear();
-            ////clientsAdapter = new NpgsqlDataAdapter("SELECT * FROM public.clients\r\nORDER BY id ASC", connectionString);
-            ////clientsBuilder = new NpgsqlCommandBuilder(clientsAdapter);
-            //clientsAdapter.Fill(dataSet, "clients");
-
-            ////dataGridViewClients.Refresh();
+            
             bool res = Validate();
             if (res)
             {
@@ -172,6 +185,20 @@ namespace WindowsFormsApp2
 
         private void buttonGetReport1_Click(object sender, EventArgs e)
         {
+            //var request = dbContext.pizza.Join(dbContext.ingredients, p => p.ingredients, m => m.id,
+            //    (p, m) => p).Where(i => i.ingredients == (int)comboBoxIngredients.SelectedValue)
+            //    .Select(i => new { PizzaName = i.C_name, Description = i.description })
+            //    .ToList();
+            var request = dbContext.pizza.Where(p => p.ingredients.Any(i => i.id == (int)comboBoxIngredients.SelectedValue))
+                .Select(p=>new
+                {
+                    Name = p.C_name,
+                    Description = p.description
+                   
+                }).ToList();
+            dataGridViewReport1.DataSource = request;
+
+
             //using (NpgsqlConnection sqlConnection = new NpgsqlConnection(connectionString))
             //{
             //    //NpgsqlConnection sqlConnection = new NpgsqlConnection(connectionString);
@@ -200,6 +227,14 @@ namespace WindowsFormsApp2
             //}
         }
 
+        private class ParResult
+        {
+            public int order_id { get; set; }
+            public string client_full_name { get; set; }
+            public string courier_full_name { get; set; }
+            public DateTime order_date { get; set; }
+        }
+
         /// <summary>
         /// нажатие кнопки вызова хранимой процедуры
         /// </summary>
@@ -207,6 +242,24 @@ namespace WindowsFormsApp2
         /// <param name="e"></param>
         private void buttonReport2_Click(object sender, EventArgs e)
         {
+
+
+            NpgsqlParameter param1 = new NpgsqlParameter("month", (int)numericUpDown1.Value);
+            NpgsqlParameter param2 = new NpgsqlParameter("year", (int)numericUpDown2.Value);
+
+            var result = dbContext.Database.SqlQuery<ParResult>("select * from GetOrdersByMonthYear(@month, @year)", new object[] { param1, param2 }).ToList();
+            //var data = result.GroupBy(i => new { i.courier_full_name }).ToDictionary(i => i.Key, i => i.Select(j => j.order_id)).Select(i =>
+            //new { i.Key.courier_full_name, clients = String.Join(",", i.Value.Select(j => j).ToArray()) }).ToList();
+            
+            //var data = result.GroupBy(i => new { i.courier_full_name }).ToDictionary(i => i.Key, i => i.Select(j => j.order_id)).Select(i =>
+            //new { i.Key.courier_full_name, orders = String.Join(",", i.Value.Select(j => j).ToArray()) }).ToList();
+            
+            var data = result.GroupBy(i => i.courier_full_name).Select(j =>
+            new { j.Key, ordercount = j.Count()}).ToList();
+
+
+            dataGridViewReport2.DataSource = data;
+            
             //using (NpgsqlConnection sqlConnection = new NpgsqlConnection(connectionString))
             //{
 
@@ -247,7 +300,17 @@ namespace WindowsFormsApp2
         private void buttonSaveOrders_Click(object sender, EventArgs e)
         {
 
-            //ordersAdapter.Update(dataSet, "orders");
+            bool res = Validate();
+            if (res)
+            {
+                LoadCouriers();
+                LoadStatuses();
+                dataGridViewOrders.DataSource = null;
+                LoadOrders();
+                dataGridViewClients.DataSource = null;
+                dataGridViewClients.Refresh();
+
+            }
 
         }
 

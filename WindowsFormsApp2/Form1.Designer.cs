@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridViewClients = new System.Windows.Forms.DataGridView();
@@ -51,12 +52,7 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewReport2 = new System.Windows.Forms.DataGridView();
-            this.Id_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClientId_ = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.CourierId_ = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.orderdate_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -121,6 +117,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clients";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(325, 4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(89, 32);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "DELETE";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button6
             // 
@@ -372,48 +378,11 @@
             this.dataGridViewReport2.AllowUserToAddRows = false;
             this.dataGridViewReport2.AllowUserToDeleteRows = false;
             this.dataGridViewReport2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewReport2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_,
-            this.ClientId_,
-            this.CourierId_,
-            this.orderdate_});
             this.dataGridViewReport2.Location = new System.Drawing.Point(4, 58);
             this.dataGridViewReport2.Name = "dataGridViewReport2";
             this.dataGridViewReport2.ReadOnly = true;
             this.dataGridViewReport2.Size = new System.Drawing.Size(761, 339);
             this.dataGridViewReport2.TabIndex = 1;
-            // 
-            // Id_
-            // 
-            this.Id_.DataPropertyName = "id";
-            this.Id_.HeaderText = "Id";
-            this.Id_.Name = "Id_";
-            this.Id_.ReadOnly = true;
-            // 
-            // ClientId_
-            // 
-            this.ClientId_.DataPropertyName = "clientId";
-            this.ClientId_.HeaderText = "Клиент";
-            this.ClientId_.Name = "ClientId_";
-            this.ClientId_.ReadOnly = true;
-            this.ClientId_.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ClientId_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // CourierId_
-            // 
-            this.CourierId_.DataPropertyName = "courierId";
-            this.CourierId_.HeaderText = "Курьер";
-            this.CourierId_.Name = "CourierId_";
-            this.CourierId_.ReadOnly = true;
-            this.CourierId_.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CourierId_.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // orderdate_
-            // 
-            this.orderdate_.DataPropertyName = "odrerdate";
-            this.orderdate_.HeaderText = "Дата заказа";
-            this.orderdate_.Name = "orderdate_";
-            this.orderdate_.ReadOnly = true;
             // 
             // button4
             // 
@@ -424,16 +393,6 @@
             this.button4.Text = "Найти";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.buttonReport2_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(325, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(89, 32);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "DELETE";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -635,10 +594,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ClientId_;
-        private System.Windows.Forms.DataGridViewComboBoxColumn CourierId_;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderdate_;
         private System.Windows.Forms.BindingSource bindingSourceClients;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;

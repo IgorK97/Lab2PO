@@ -340,7 +340,7 @@ namespace WindowsFormsApp2
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException sa)
                     {
-                        label11.Text = $"Processing failed: {sa.InnerException.Message}, {sa.HResult}";
+                        label11.Text = $"Processing failed: {sa.InnerException.InnerException.Message}";
                     }
                 }
                 else
