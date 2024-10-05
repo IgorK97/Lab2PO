@@ -288,6 +288,7 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.groupBox1);
             this.Name = "AddClientForm";
             this.Text = "Новый клиент";
+            this.Load += new System.EventHandler(this.AddClientForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -316,72 +317,108 @@ namespace WindowsFormsApp2
             {
                 if (ncl==null)
                 {
-                    clients ncl = new clients();
-                    ncl.first_name = textBox1.Text;
-                    ncl.last_name = textBox2.Text;
-                    ncl.surname = textBox3.Text;
-                    ncl.login = textBox4.Text;
-                    ncl.C_password = textBox5.Text;
-                    ncl.phone = textBox6.Text;
-                    ncl.email = textBox7.Text;
-                    ncl.address = textBox8.Text;
+                    bool flag = true;
+                    foreach(var symbol in textBox6.Text)
+                        if (!char.IsDigit(symbol))
+                        {
+                            flag = false;
+                            break;
+                        }
+                    if (textBox1.Text != "" && textBox2.Text != "" && textBox4.Text != "" &&
+                        textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" &&textBox7.Text.Contains('@')&&flag)
+                    {
+                        clients ncl = new clients();
+                        ncl.first_name = textBox1.Text;
+                        ncl.last_name = textBox2.Text;
+                        ncl.surname = textBox3.Text;
+                        ncl.login = textBox4.Text;
+                        ncl.C_password = textBox5.Text;
+                        ncl.phone = textBox6.Text;
+                        ncl.email = textBox7.Text;
+                        ncl.address = textBox8.Text;
 
 
-                    dbContext.clients.Add(ncl);
-                    try
-                    {
-                        dbContext.SaveChanges();
-                        Close();
-                        MessageBox.Show("Новый объект добавлен");
+                        dbContext.clients.Add(ncl);
+                        try
+                        {
+                            dbContext.SaveChanges();
+                            Close();
+                            MessageBox.Show("Новый объект добавлен");
+                        }
+                        catch (Npgsql.PostgresException se)
+                        {
+                            label11.Text = $"Processing failed: {se.Message}";
+                        }
+                        catch (System.Data.Entity.Infrastructure.DbUpdateException sa)
+                        {
+                            label11.Text = $"Processing failed: {sa.InnerException.InnerException.Message}";
+                        }
+                        catch (System.Data.Entity.Validation.DbEntityValidationException so)
+                        {
+                            label11.Text = $"Processing failed: {so.Message}\n Проверьте наличие обязательных полей";
+                        }
                     }
-                    catch (Npgsql.PostgresException se)
+                    else
                     {
-                        label11.Text = $"Processing failed: {se.Message}";
-                    }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException sa)
-                    {
-                        label11.Text = $"Processing failed: {sa.InnerException.InnerException.Message}";
-                    }
-                    catch(System.Data.Entity.Validation.DbEntityValidationException so)
-                    {
-                        label11.Text = $"Processing failed: {so.Message}\n Проверьте наличие обязательных полей";
+                        label11.Text = "Processing failed: Проверьте наличие обязательных полей";
+
                     }
                 }
                 else
                 {
-                    //clients ncl = dbContext.clients.Where(i => i.id == id).FirstOrDefault();
+                    bool flag = true;
+                    foreach (var symbol in textBox6.Text)
+                        if (!char.IsDigit(symbol))
+                        {
+                            flag = false;
+                            break;
+                        }
+                    if (textBox1.Text != "" && textBox2.Text != "" && textBox4.Text != "" &&
+                        textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox7.Text.Contains('@') && flag)
+                    {
+                        ncl.first_name = textBox1.Text;
+                        ncl.last_name = textBox2.Text;
+                        ncl.surname = textBox3.Text;
+                        ncl.login = textBox4.Text;
+                        ncl.C_password = textBox5.Text;
+                        ncl.phone = textBox6.Text;
+                        ncl.email = textBox7.Text;
+                        ncl.address = textBox8.Text;
+                        try
+                        {
+                            dbContext.SaveChanges();
+                            Close();
+                            MessageBox.Show("Объект успешно изменен");
+                        }
+                        catch (Npgsql.PostgresException se)
+                        {
+                            label11.Text = $"Processing failed: {se.Message}";
+                        }
+                        catch (System.Data.Entity.Infrastructure.DbUpdateException sa)
+                        {
+                            label11.Text = $"Processing failed: {sa.InnerException.Message}, {sa.HResult}";
+                        }
+                        catch (System.Data.Entity.Validation.DbEntityValidationException so)
+                        {
+                            label11.Text = $"Processing failed: {so.Message}\n Проверьте наличие обязательных полей";
 
-                    ncl.first_name = textBox1.Text;
-                    ncl.last_name = textBox2.Text;
-                    ncl.surname = textBox3.Text;
-                    ncl.login = textBox4.Text;
-                    ncl.C_password = textBox5.Text;
-                    ncl.phone = textBox6.Text;
-                    ncl.email = textBox7.Text;
-                    ncl.address = textBox8.Text;
-                    try
-                    {
-                        dbContext.SaveChanges();
-                        Close();
-                        MessageBox.Show("Объект успешно изменен");
+                        }
                     }
-                    catch (Npgsql.PostgresException se)
+                    else
                     {
-                        label11.Text = $"Processing failed: {se.Message}";
-                    }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException sa)
-                    {
-                        label11.Text = $"Processing failed: {sa.InnerException.Message}, {sa.HResult}";
-                    }
-                    catch(System.Data.Entity.Validation.DbEntityValidationException so)
-                    {
-                        label11.Text = $"Processing failed: {so.Message}\n Проверьте наличие обязательных полей";
+                        label11.Text = "Processing failed: Проверьте наличие обязательных полей";
+
                     }
                 }
 
 
             }
 
+
+        }
+
+        private void AddClientForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

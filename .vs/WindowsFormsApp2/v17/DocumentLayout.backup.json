@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\migrdb\\teachers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|solutionrelative:migrdb\\teachers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\migrdb\\migrations\\202410041809539_removeteachersfamilynameproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|solutionrelative:migrdb\\migrations\\202410041809539_removeteachersfamilynameproperty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\migrdb\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|solutionrelative:migrdb\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\migrdb\\ispucontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|solutionrelative:migrdb\\ispucontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\migrdb\\cathedras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|solutionrelative:migrdb\\cathedras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\migrdb\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\migrdb\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6593A929-8054-4A29-9697-70A3FD96058D}|MigrDB\\MigrDB.csproj|solutionrelative:migrdb\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\windowsformsapp2\\mypizzadeliverydb.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\mypizzadeliverydb.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\windowsformsapp2\\addclientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\addclientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\windowsformsapp2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\windowsformsapp2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\igor\\source\\repos\\windowsformsapp2\\windowsformsapp2\\addclientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\addclientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C709D30-6793-4FB8-A235-0315DEB6FC8A}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\windowsformsapp2\\mypizzadeliverydb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
@@ -42,97 +38,65 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "202410041809539_RemoveTeachersFamilyNameProperty.cs",
-              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\Migrations\\202410041809539_RemoveTeachersFamilyNameProperty.cs",
-              "RelativeDocumentMoniker": "MigrDB\\Migrations\\202410041809539_RemoveTeachersFamilyNameProperty.cs",
-              "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\Migrations\\202410041809539_RemoveTeachersFamilyNameProperty.cs",
-              "RelativeToolTip": "MigrDB\\Migrations\\202410041809539_RemoveTeachersFamilyNameProperty.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T18:10:01.079Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Teachers.cs",
-              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\Teachers.cs",
-              "RelativeDocumentMoniker": "MigrDB\\Teachers.cs",
-              "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\Teachers.cs",
-              "RelativeToolTip": "MigrDB\\Teachers.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwA8AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T17:47:05.412Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\Form1.cs",
               "RelativeDocumentMoniker": "MigrDB\\Form1.cs",
               "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\Form1.cs",
               "RelativeToolTip": "MigrDB\\Form1.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABYAAAB+AAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAlwBYAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T17:30:33.434Z",
+              "WhenOpened": "2024-10-05T06:25:56.229Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Cathedras.cs",
-              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\Cathedras.cs",
-              "RelativeDocumentMoniker": "MigrDB\\Cathedras.cs",
-              "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\Cathedras.cs",
-              "RelativeToolTip": "MigrDB\\Cathedras.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\Form1.cs",
+              "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp2\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T18:01:23.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T05:58:15.898Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MyPizzaDeliveryDb.Context.cs",
-              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\MyPizzaDeliveryDb.Context.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\MyPizzaDeliveryDb.Context.cs",
-              "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\MyPizzaDeliveryDb.Context.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\MyPizzaDeliveryDb.Context.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwAoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "AddClientForm.cs",
+              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\AddClientForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\AddClientForm.cs",
+              "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\AddClientForm.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\AddClientForm.cs",
+              "ViewState": "AgIAAGoBAAAAAAAAAAD4v3cBAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T17:20:20.177Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ISPUContext.cs",
-              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\ISPUContext.cs",
-              "RelativeDocumentMoniker": "MigrDB\\ISPUContext.cs",
-              "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\ISPUContext.cs",
-              "RelativeToolTip": "MigrDB\\ISPUContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAASwA4AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T17:19:23.348Z",
+              "WhenOpened": "2024-10-05T05:58:11.229Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "AddClientForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\AddClientForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\AddClientForm.cs",
+              "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\AddClientForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "WindowsFormsApp2\\AddClientForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T05:58:06.478Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\MigrDB\\Form1.cs",
               "RelativeDocumentMoniker": "MigrDB\\Form1.cs",
@@ -144,15 +108,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\Form1.cs",
+              "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\Form1.cs",
+              "ViewState": "AgIAAD8BAAAAAAAAAAAlwIIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T05:58:17.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MyPizzaDeliveryDb.edmx [Diagram1]",
               "DocumentMoniker": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\MyPizzaDeliveryDb.edmx",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\MyPizzaDeliveryDb.edmx",
               "ToolTip": "C:\\Users\\Igor\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\MyPizzaDeliveryDb.edmx [Diagram1]",
               "RelativeToolTip": "WindowsFormsApp2\\MyPizzaDeliveryDb.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-10-03T14:30:11.35Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2024-10-03T14:30:11.35Z"
             }
           ]
         }
