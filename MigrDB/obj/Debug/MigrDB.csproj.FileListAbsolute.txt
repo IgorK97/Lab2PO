@@ -40,3 +40,4 @@ C:\Users\Igor\source\repos\WindowsFormsApp2\MigrDB\obj\Debug\MigrDB.Migrations.I
 C:\Users\Igor\source\repos\WindowsFormsApp2\MigrDB\obj\Debug\MigrDB.Migrations.RemoveTeachersBDateProperty.resources
 C:\Users\Igor\source\repos\WindowsFormsApp2\MigrDB\obj\Debug\MigrDB.Migrations.RemoveTeachersPhoneProperty.resources
 C:\Users\Igor\source\repos\WindowsFormsApp2\MigrDB\obj\Debug\MigrDB.Migrations.RemoveTeachersFamilyNameProperty.resources
+C:\Users\Igor\source\repos\WindowsFormsApp2\MigrDB\obj\Debug\MigrDB.Migrations.AddForeignKey.resources

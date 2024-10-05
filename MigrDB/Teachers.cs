@@ -14,5 +14,8 @@ namespace MigrDB
         public DateTime BDate { get; set; }
         public string Phone { get; set; }
         public string FamilyName {  get; set; }
+
+        public int? CathedrasId { get; set; }
+        public Cathedras Cathedras { get; set; }
     }
 }
