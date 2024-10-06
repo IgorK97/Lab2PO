@@ -20,7 +20,7 @@ namespace MigrDB
             {
                 Database.SetInitializer<ISPUContext>(null);
                 dbc.Cathedras.Select(i => i).ToList();
-                dbc.Cathedras.Add(new Cathedras() { Name = "Новая кафедра1", abbreviation = "НК1" });
+                dbc.Cathedras.Add(new Cathedras() { Name = "Новая кафедра2", abbreviation = "НК2" });
                 dbc.SaveChanges();
             }
         }

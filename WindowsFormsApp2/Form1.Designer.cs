@@ -53,6 +53,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewReport2 = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
+            this.NA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +76,8 @@
             this.deliverytimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceOrders = new System.Windows.Forms.BindingSource(this.components);
+            this.KC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).BeginInit();
@@ -271,6 +275,9 @@
             this.dataGridViewReport1.AllowUserToAddRows = false;
             this.dataGridViewReport1.AllowUserToDeleteRows = false;
             this.dataGridViewReport1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewReport1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NA,
+            this.ND});
             this.dataGridViewReport1.Location = new System.Drawing.Point(3, 76);
             this.dataGridViewReport1.Name = "dataGridViewReport1";
             this.dataGridViewReport1.ReadOnly = true;
@@ -378,6 +385,9 @@
             this.dataGridViewReport2.AllowUserToAddRows = false;
             this.dataGridViewReport2.AllowUserToDeleteRows = false;
             this.dataGridViewReport2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewReport2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.KC,
+            this.FC});
             this.dataGridViewReport2.Location = new System.Drawing.Point(4, 58);
             this.dataGridViewReport2.Name = "dataGridViewReport2";
             this.dataGridViewReport2.ReadOnly = true;
@@ -393,6 +403,20 @@
             this.button4.Text = "Найти";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.buttonReport2_Click);
+            // 
+            // NA
+            // 
+            this.NA.DataPropertyName = "Name";
+            this.NA.HeaderText = "Название";
+            this.NA.Name = "NA";
+            this.NA.ReadOnly = true;
+            // 
+            // ND
+            // 
+            this.ND.DataPropertyName = "Description";
+            this.ND.HeaderText = "Описание";
+            this.ND.Name = "ND";
+            this.ND.ReadOnly = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -541,6 +565,20 @@
             // 
             this.bindingSourceOrders.DataSource = typeof(WindowsFormsApp2.orders);
             // 
+            // KC
+            // 
+            this.KC.DataPropertyName = "Key";
+            this.KC.HeaderText = "ФИО";
+            this.KC.Name = "KC";
+            this.KC.ReadOnly = true;
+            // 
+            // FC
+            // 
+            this.FC.DataPropertyName = "ordercount";
+            this.FC.HeaderText = "Количество";
+            this.FC.Name = "FC";
+            this.FC.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -618,6 +656,10 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ND;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FC;
     }
 }
 

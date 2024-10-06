@@ -255,7 +255,7 @@ namespace WindowsFormsApp2
             //new { i.Key.courier_full_name, orders = String.Join(",", i.Value.Select(j => j).ToArray()) }).ToList();
             
             var data = result.GroupBy(i => i.courier_full_name).Select(j =>
-            new { j.Key, ordercount = j.Count()}).ToList();
+            new { j.Key, ordercount = j.Count()}).OrderByDescending(c => c.ordercount).ToList();
 
 
             dataGridViewReport2.DataSource = data;
